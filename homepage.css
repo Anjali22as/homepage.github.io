@@ -1,0 +1,432 @@
+#uni{
+    padding: 0;
+    margin: 0;
+    background: white;
+   }
+   
+div{
+    display: block;
+}
+
+#mm{
+    display: none;
+}
+
+#entery{
+
+    background-image: url('images/Japanbg.png');
+    width: 1519px;
+    height: 751px;
+    position: relative;
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    
+
+}
+
+#tp{
+    width: 700px;
+    height: 50px;
+    position:absolute;
+    top:10px;
+    left: 750px;
+    
+}
+
+#top-nav{
+    width: 910px;
+    height: 50px;
+    position: relative;
+    left: 600px;
+    top:10px;
+    font-size: 20px;
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;
+    border-radius: 30px;
+    
+}
+
+
+#n1{
+    position: relative;
+    left:250px;
+    top:12px;
+    text-decoration: none;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+}
+#n1 a{
+    color:#054054; ;
+}
+
+#n2{
+    position: relative;
+    left: 350px;
+    top:12px;
+    text-decoration: none;
+    
+    border-radius: 30px;
+    color: black;
+    width: 140px;
+    height: 40px;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+      
+}
+#n2 a{
+    color:#054054; ;
+}
+
+#n3{
+    position: relative;
+    left: 450px;
+    top:12px;
+    text-decoration: none;
+    color: #054054;
+    
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    padding: 6px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none !important;
+    
+}
+#n3 a{
+    color:#054054; 
+}
+
+a{
+    text-decoration: none !important;
+    width: 140px;
+    height: 40px;
+}
+
+#mon{
+  background-color: transparent;
+  position: absolute;
+  width: 850px;
+  height: 850px;
+  bottom: 8px;
+}
+
+
+#main-font{
+    font-family: 'Barlow';
+     font-size: 80px;
+     position: absolute;
+     font-weight: 400;
+     top:200px;
+     left:300px;
+}
+
+#subcont{
+    position: absolute;
+    width: 500px;
+    left:300px;
+    top:500px;
+    font-family: 'Roboto Slab', serif;
+    font-weight:300;
+    font-size: 20px;
+}
+
+
+#theabout{
+    width: 1519px;
+    height: 751px;
+}
+
+#ab1{
+    position: relative;
+    bottom: 600px;
+}
+
+#bb1{
+    font-family: 'Barlow';
+    font-size: 40px;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    bottom: 40px;
+    left: 600px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+    background-color:#054054;
+    padding: 9px;
+}
+
+#baa2{
+    margin: 20px;
+    width: 1200px;
+    height: 400px;
+    position: absolute;
+    left:160px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    font-weight:300;
+    font-size: 20px;
+}
+
+#symm2{
+    position: absolute;
+    top:1340px;
+    left:720px;
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+}
+
+#feed{
+    height: 700px;
+}
+
+#ff4{
+    width: 1450px;
+    height: 440px;
+    position: relative;
+    left:35px;
+    
+    
+}
+
+#f12{
+    width: 700px;
+    height: 50px;
+    font-family: 'Barlow';
+    font-size: 50px;
+    padding: 10px;
+    position: absolute;
+    left: 570px;
+}
+
+#f13{
+    width:700px;
+    height: 50px;
+    font-size: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    position: absolute;
+    left:650px;
+    top:90px;
+}
+
+#sm{
+    width: 600px;
+    height: 330px;
+    background-color: #6497b1;
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+    opacity: 0.8;
+    position: relative;
+    left:450px;
+    top:130px;
+    border-radius: 12px;
+    resize: vertical;
+}
+
+#f14{
+    position: absolute;
+    left: 700px;
+    bottom: 270px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: white;
+}
+
+#nameuser{
+    position: absolute;
+    left:660px;
+    bottom: 240px;
+}
+
+
+#fff{
+   position: absolute;
+   left:700px;
+   bottom:195px;
+   font-family: 'Roboto Slab', serif;
+   font-weight: 400;
+   color: white;
+}
+
+#emailuser{
+    position: absolute;
+    left:660px;
+    bottom:165px;
+}
+
+#f16{
+    position: absolute;
+    left:690px;
+    bottom: 125px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 400;
+    color: white;
+}
+
+#messageuser{
+    position: absolute;
+    left:660px;
+    bottom: 75px;
+}
+
+#ssb{
+    position: absolute;
+    left:692px;
+    bottom: 6px;
+    background-color:#054054;
+    border: none; /* Remove borders */
+    padding-left: 3px;
+    padding-right: 3px;
+    font-size: 19px ;/* Set a font size */
+    border-radius: 12px;
+    height: 40px;
+    width: 100px;
+    font-family: 'Barlow';
+    color: white;
+    vertical-align:middle;
+}
+
+#ssb:hover{
+    background-color: #10566d;
+}
+
+#feedbackimg{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: 30px;
+    
+}
+
+textarea{
+    resize: vertical;
+}
+
+
+#designby{
+    width: 1518px;
+    height: 252px;
+    background-color:#054054;
+    position: relative;
+    bottom: 200px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#d1{
+    width: 800px;
+    height: 140px;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    font-weight:100;
+    color: white;
+    position: relative;
+    left: 140px;
+    top: 60px;
+    text-align: justify;
+}
+
+#imd1{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+
+#d12{
+    padding-bottom: 4px;
+    padding-top: 7px;
+}
+
+#d13{
+    padding-bottom: 4px;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+#d14{
+    padding-bottom: 4px;
+}
+
+#d15{
+    padding-bottom: 4px;
+}
+
+#d16{
+    padding-bottom: 4px;
+    padding-left: 30px;
+    padding-top: 4px;
+}
+
+#d21{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left:135px;
+    top:165px;
+}
+
+#ds{
+    font-size: 16px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    color: white;
+    position: absolute;
+    left:700px;
+    bottom:117px;
+
+}
+
+#d22{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 860px;
+    bottom:110px;
+    border: 2px solid whitesmoke;
+}
+
+#d23{
+     width: 120px;
+     height: 120px;
+     border-radius: 50%;
+     position: absolute;
+     left:1300px;
+     bottom: 70px;
+     border: 2px solid white;
+}
+
+#d24{
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    position: absolute;
+    left:1302px;
+    bottom: 40px;
+    font-size: 18px;
+    padding: 0;
+    font-weight: 300;
+}
+
+#enn{
+    height: 2000px;
+}
+
+
+
+

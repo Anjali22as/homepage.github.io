@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ikigai</title>
+
+        <link rel="stylesheet" href="homepage.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+        
+    
+    
+        
+    </head>
+    <body id="uni">
+        
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+
+<script>
+
+    function sendMail(){
+        var Name=document.querySelector("#nameuser").value;
+        var sender=document.querySelector("#emailuser").value;
+        var messageb=document.querySelector("#messageuser").value;
+
+        var Body= 'Name:'+Name+ 'sender:'+sender+ 'feedback:'+messageb;
+        
+    
+    Email.send({
+    Host:"smtp.gmail.com",
+    Username:'project2023jaya@gmail.com',
+    Password:'ziva2836@S',
+    To : 'project2023jaya@gmail.com',
+    From : "jaya08anjali@gmail.com",
+    Subject: "New message on contact from "+Name,
+    Body : Body
+}).then(
+  message => {
+     if(message=='OK'){
+					alert('Your mail has been send. Thank you for your feedback.');
+                    document.querySelector("#nameuser").value="";
+                    document.querySelector("#emailuser").value="";
+                    document.querySelector("#messageuser").value="";
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ');
+						
+					}
+  }
+);
+    }
+</script>
+    
+  
+   
+<div id="enn">
+
+<div id="entery">
+   
+    <div id="tp"></div>
+    <div id="top-nav">
+      <span>
+        <span id="n1"><a href="#theabout">About&nbsp us  </a></span>
+        <span id="n2"><a href="ikigaimainpage.html">Your IKIGAI</a></span>
+        <span id="n3"><a href="#feed">Feedback</a></span>
+    </span>
+    </div>
+  
+
+    
+   
+    <div id="main-font">
+        <div>WELCOME</div>
+        <div>TO</div>
+        <div>IKIGAI</div>
+    </div>
+    <div id="subcont">
+        <div>A litle step towards finding "purpose of our life"</div> 
+        <div>inspired by a japanese book named "IKIGAI" by </div>
+        <div>Héctor García and Francesc Miralles.</div>
+    </div>  
+
+</div>
+   
+
+    <div id="theabout"> </div>
+      <div id="ab1">
+          <div id="bb1">ABOUT US</div>
+          <div id="baa2"><p>"IKIGAI" is japanese secret of happy life that comes from two word iki meaning “alive” 
+          or “life,” and gai, meaning “benefit” or “worth.” This simple website intends to help individuals to 
+           simplify their lives by pursuing what sparks joy for them by simply combining learnings of the book in the
+          practical form.</p>
+          <p>The website tries to combine learnings of ikigai book in the form of small article that provides insights
+              of the thoughts and esence of how ikigai tries to allowing the self’s possibilities to blossom.And, this
+            treasure map can help you find your way to finding wonderful things about yourself that you can share with
+            the world, and the world will say ‘thank you’ for it.”  
+          </p>
+          <p>
+            “Ikigai is what, day after day and year after year, each of us most essentially lives for.”
+          </p>
+          </div>
+          
+
+      </div>
+
+      <img src="images/sym1-removebg-preview.png" id="symm2">
+   
+
+    <div id="feed">
+        <div id="ff4">
+           
+            
+            <div id="f12">Help Us Improve</div>
+            <div id="f13">Was this helpful ?</div>
+            <div id="sm"></div>
+        <form action="javascript:sendMail()" method="post">
+            <div class="form-class">
+                <label id="f14" for="nameuser">Your Name</label>
+                <input type="text" id="nameuser" name="nameuser">
+            </div>
+            
+            <div class="form-class">
+                <label id="fff" for="emailuser">Your Email</label>
+                <input type="email" id="emailuser" name="emailuser">   
+            </div>
+            
+            <div class="form-class">
+                <label id="f16" for="messageuser">Your Message</label>
+                <textarea id="messageuser"  name="messageuser" rows="2"></textarea>
+            </div>
+
+            <button type="submit"  id="ssb">SUBMIT</button>
+
+        </form>
+
+            <img src="images/feedback.png" id="feedbackimg">
+            
+      
+        
+        </div>
+    </div>
+
+    <div id="designby">
+        <img src="images/anjali.jfif" id="imd1">
+        <div id="d1">
+              
+              <div id="d12">Designed by</div>
+              <div id="d13">Anjali Singh</div>
+              <div id="d14">Computer Science Engineering Specialization in Gaming Technology</div>
+              <div id="d15">VIT'23 , Bhopal</div>
+              <div id="d16">jaya08anjali@gmail.com</div>
+
+        </div>
+
+        <div id="d2">
+            <img src="images/[removal.ai]_tmp-620a8e9547025.png"  id="d21">
+            <div id="ds">Connect with me on</div>
+            <a href="https://www.linkedin.com/in/anjali-singh-8284a61a0/" target="_blank"><img src="images/[removal.ai]_tmp-620a7b6e8f94d.png"  id="d22"></a>
+            <img src="images/ikiii.jfif" id="d23">
+            <div id="d24">Purpose of life</div>
+
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+       
+</body> 
+</html>
