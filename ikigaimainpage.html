@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ikigai</title>
+
+        <link rel="stylesheet" href="iki.css">
+        <link href='https://fonts.googleapis.com/css?family=Barlow' rel='stylesheet'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    
+    
+        
+    </head>
+    <body>
+
+        <script type="text/javascript">
+
+
+        function ff(){
+
+            let name=document.querySelector("#mf").value;
+           
+            
+            var m=document.getElementById("ss");
+            m.style.display="none";
+            var n=document.getElementById("ikigaimain");
+            n.style.display="block";
+
+            let message=document.querySelector("#pm2");
+            message.innerHTML=name+"...!";
+           }
+        
+        </script>
+
+        <script type="text/javascript">
+
+            
+            var i=0;
+            var j=0;
+            var k=0;
+            var l=0;
+            var arr1=Array();
+            var arr2=Array();
+            var arr3=Array();
+            var arr4=Array();
+        
+            var freq = new Map();
+            var am=new Array();
+            var count=new Array();
+        
+            function add1(){
+                arr1[i]=document.getElementById("L1").value;
+                i++;
+                arr1[i]=document.getElementById("L2").value;
+                i++;
+                arr1[i]=document.getElementById("L3").value;
+                i++;
+                arr1[i]=document.getElementById("L4").value;
+                i++;
+                arr1[i]=document.getElementById("L5").value;
+                i++;
+               // document.getElementById("a").innerHTML+=arr1;
+            }
+               
+            function add2(){
+                arr2[j]=document.getElementById("G1").value;
+                j++;
+                arr2[j]=document.getElementById("G2").value;
+                j++;
+                arr2[j]=document.getElementById("G3").value;
+                j++;
+                arr2[j]=document.getElementById("G4").value;
+                j++;
+                arr2[j]=document.getElementById("G5").value;
+                j++;
+               // document.getElementById("b").innerHTML+=arr2;
+            }
+        
+            function add3(){
+                arr3[k]=document.getElementById("P1").value;
+                k++;
+                arr3[k]=document.getElementById("P2").value;
+                k++;
+                arr3[k]=document.getElementById("P3").value;
+                k++;
+                arr3[k]=document.getElementById("P4").value;
+                k++;
+                arr3[k]=document.getElementById("P5").value;
+                k++;
+               // document.getElementById("c").innerHTML+=arr3;
+            }
+        
+            function add4(){
+                arr4[l]=document.getElementById("N1").value;
+                l++;
+                arr4[l]=document.getElementById("N2").value;
+                l++;
+                arr4[l]=document.getElementById("N3").value;
+                l++;
+                arr4[l]=document.getElementById("N4").value;
+                l++;
+                arr4[l]=document.getElementById("N5").value;
+                l++;
+               // document.getElementById("d").innerHTML+=arr4;
+            }
+            
+            function findCounts(arr1, arr2, arr3 , arr4){
+                
+                var a=new Array();
+                a=arr1.concat(arr2);
+                a=a.concat(arr3);
+                a=a.concat(arr4);
+        
+               
+                /*var c=1;*/
+        
+            
+                
+                for(let i = 0; i < a.length; i++)
+                {
+                      if (freq.has(a[i]))
+                    {
+                          freq.set(a[i], freq.get(a[i]) + 1);
+                    }
+                      else
+                    {
+                          freq.set(a[i], 1);
+                    }
+                }
+        
+        
+                for(let [key, value] of freq)
+                {
+                    /*document.write(key+ " -> "+value+"<br>");*/
+                   /* document.getElementById("co").innerHTML+=(key+"->"+value+"<br>"); */
+                    am.push(key);
+                    count.push(value);
+                }
+        
+               
+            };
+        
+            
+            const findIKIGAI=(arr1, arr2, arr3 , arr4)=>{
+                const arr5=[];
+                const {length: len1}=arr1;
+                const {length: len2}=arr2;
+                const sm=(len1 < len2 ? arr1 : arr2).slice();
+                const big=(len1 >= len2 ? arr1 : arr2).slice();
+                for(let i=0; i<sm.length ; i++){
+                    if(big.indexOf(sm[i])!=-1){
+                      arr5.push(sm[i]);
+                      big.splice(big.indexOf(sm[i]), 1, undefined);
+                    }       
+                }
+               console.log(9);
+                 
+                const arr6=[];
+                const {length: len3}=arr3;
+                const {length: len4}=arr4;
+                const small=(len3 < len4 ? arr3 : arr4).slice();
+                const biger=(len3 >= len4 ? arr3 : arr4).slice();
+                for(let i=0; i<small.length ; i++){
+                    if(biger.indexOf(small[i])!=-1){
+                      arr6.push(small[i]);
+                      biger.splice(biger.indexOf(small[i]), 1, undefined);
+                    }       
+                }
+        
+                console.log(9);
+                const arr7=[];
+                const {length: len5}=arr5;
+                const {length: len6}=arr6;
+                const smm=(len5 < len6 ? arr5 : arr6).slice();
+                const bigg=(len5 >= len6 ? arr5 : arr6).slice();
+                for(let i=0; i<smm.length ; i++){
+                    if(bigg.indexOf(smm[i])!=-1){
+                      arr7.push(smm[i]);
+                      bigg.splice(big.indexOf(smm[i]), 1, undefined);
+                    }       
+                }
+                
+                console.log(9);
+                if(arr7.length>0){
+                   document.getElementById("imsg2").innerHTML+=arr7;
+                   var ds=document.getElementById("imsg2");
+                   ds.style.display="block";
+                 }
+                else{
+                   document.getElementById("imsg2").innerHTML="not found";
+                 }
+                
+                 console.log(9);
+        
+            }
+            
+        
+        /*
+            window.onload = function() {
+                var dps = []; //dataPoints. 
+        
+                var chart = new CanvasJS.Chart("chartContainer", {
+                    title: {
+                        text: "IKIGAI  Activity  Frequencies"
+                    },
+                    data: [{
+                        type: "column",
+                        dataPoints: dps
+                    }]
+                });
+           
+            
+                function addDataPointsAndRender() {
+                    for(let d=0; d<am.length; d++){
+                    console.log(00);
+                    
+                       var xValue = am[d];
+                       var yValue = Number(count[d]);
+                    
+                    
+                    console.log(100);
+                    dps.push({
+                        label: xValue,
+                        y: yValue
+                    });
+                    chart.render();
+
+                    document.getElementById('bFindIki').addEventListener("click",function(){
+                    for(let d=0; d<am.length; d++){
+                        chart.label[d].remove();
+                        chart.y[d].remove();
+                    }
+                });
+                }
+                }
+            
+        
+                var renderButton = document.getElementById("renderButton");
+                renderButton.addEventListener("click", addDataPointsAndRender);
+
+                
+            }
+        */
+            
+        
+            function remove1(){
+               document.getElementById("L1").value="";
+               document.getElementById("L2").value="";
+               document.getElementById("L3").value="";
+               document.getElementById("L4").value="";
+               document.getElementById("L5").value="";
+               for(var i=0; i<5; i++){
+               arr1.pop();
+            }
+        }
+
+            function remove2(){
+               document.getElementById("G1").value="";
+               document.getElementById("G2").value="";
+               document.getElementById("G3").value="";
+               document.getElementById("G4").value="";
+               document.getElementById("G5").value="";
+               for(var i=0; i<5; i++){
+               arr2.pop();
+            }
+        }
+
+            function remove3(){
+               document.getElementById("P1").value="";
+               document.getElementById("P2").value="";
+               document.getElementById("P3").value="";
+               document.getElementById("P4").value="";
+               document.getElementById("P5").value="";
+               for(var i=0; i<5; i++){
+               arr3.pop();
+            }
+        }
+
+            function remove4(){
+               document.getElementById("N1").value="";
+               document.getElementById("N2").value="";
+               document.getElementById("N3").value="";
+               document.getElementById("N4").value="";
+               document.getElementById("N5").value="";
+               for(var i=0; i<5; i++){
+               arr4.pop();
+            }
+        }
+
+            function RemoveALL(){
+                remove1();
+                remove2();
+                remove3();
+                remove4();
+                document.getElementById("ismg2").value="";
+            }
+            </script>
+        
+    <div id="ss">
+        <div  id="firsthalf"></div>
+        <img src="images/Get started.png" id="u34">
+        <div id="swipe"> </div>
+        <img src="images/ava1-removebg-preview.png" id="user">
+            <div id="l1"><label>UserName</label></div>
+            <div id="username"><input type="text" id="mf"></div>
+            <button id="load" onclick="ff()">SUBMIT</button>
+    </div>
+    
+
+    <div id="ikigaimain">
+
+        
+        <main class="dividemain">
+            <section class="div1"></section>
+            <section class="div2"></section>
+        </main>
+
+        
+        <div id="top-nav">
+            <span>
+               <a id="n1" href='homepage.html#theabout'>About&nbsp us</a>
+               <a id="n2" href='homepage.html'>Home</a>
+               <a id="n3" onClick="window.location.href='homepage.html#feed';">Feedback</a>
+            </span>
+        </div>
+
+        <div id="premain">
+            <div id="pm1"> Hello, </div>
+            <div id="pm2"></div>
+            <div id="pm3">Let's get started to know your IKIGAI</div>
+            
+        </div>
+
+        <img src="images/flowerpot.png" id="flowerpot">
+
+
+        <div id="headmain">IKIGAI &nbsp; CALCULATOR</div>
+        
+        <div id="boxmain">
+      
+        <div id="LL">
+            <div id="Lhead">What you LOVE ??</div>
+            <div id="divmainL">
+                <div><input type="text" id="L1"></div>
+                <div><input type="text" id="L2"></div>
+                <div><input type="text" id="L3"></div>
+                <div><input type="text" id="L4"></div>
+                <div><input type="text" id="L5"></div>
+            </div>
+        
+            <button onclick="add1()" id="bL1">SUBMIT</button>
+            <button id="bL2" onclick="remove1()">REMOVE</button>
+            
+        </div>
+        
+        <div id="GG">
+            <div id="Ghead">What you are GOOD AT ??</div>
+            <div id="divmainG">
+                <div><input type="text" id="G1"></div>
+                <div><input type="text" id="G2"></div>
+                <div><input type="text" id="G3"></div>
+                <div><input type="text" id="G4"></div>
+                <div><input type="text" id="G5"></div>
+            </div>
+            
+            <button onclick="add2()" id="bG1">SUBMIT</button>
+            <button id="bG2" onclick="remove2()">REMOVE</button>
+            
+        
+        </div>
+        
+        <div id="PP">
+            <div id="Phead">What you can be PAID FOR ??</div>
+            <div id="divmainP">
+                <div><input type="text" id="P1"></div>
+                <div><input type="text" id="P2"></div>
+                <div><input type="text" id="P3"></div>
+                <div><input type="text" id="P4"></div>
+                <div><input type="text" id="P5"></div>
+            </div>
+        
+            <button onclick="add3()" id="bP1">SUBMIT</button>
+            <button id="bP2" onclick="remove3()">REMOVE</button>
+            
+        
+        </div>
+        
+        <div id="NN">
+            <div id="Nhead">What the world NEEDS ??</div>
+            <div id="divmainN">
+                <div><input type="text" id="N1"></div>
+                <div><input type="text" id="N2"></div>
+                <div><input type="text" id="N3"></div>
+                <div><input type="text" id="N4"></div>
+                <div><input type="text" id="N5"></div>
+            </div>
+        
+            <button onclick="add4()" id="bN1">SUBMIT</button>
+            <button id="bN2" onclick="remove4()">REMOVE</button>
+            
+        
+        </div>
+        
+        
+        <button onclick="findIKIGAI(arr1,arr2, arr3 , arr4)" id="bFindIki">FIND</button>
+        <button onclick="RemoveALL()" id="remALL">REMOVE ALL</button>
+        
+        <p id="imsg">YOUR IKIGAI IS : </p>
+        <p id="imsg2"></p>
+        
+        <img src="images/sym1-removebg-preview.png" id="symm2">
+
+    </div>
+
+    
+<!--
+    <div id="graphs">
+        <div id="graphmain">GRAPHICAL &nbsp; REPRESENTATION &nbsp; OF &nbsp; IKIGAI &nbsp; ACTIVITY &nbsp; FREQUENCIES</div>
+        <button id="renderButton" onclick="findCounts(arr1,arr2, arr3 , arr4)">VIEW GRAPH</button>
+        <div id="chartContainer" style="height: 400px; width: 62%; color: aqua;">
+        </div>
+        <img src="graphimg.png" id="graphimg" width="500px" height="500px">
+    </div>
+
+-->
+
+
+    
+    <div id="designby">
+        <img src="images/anjali.jfif" id="imd1">
+        <div id="d1">
+              
+              <div id="d12">Designed by</div>
+              <div id="d13">Anjali Singh</div>
+              <div id="d14">Computer Science Engineering Specialization in Gaming Technology</div>
+              <div id="d15">VIT'23 , Bhopal</div>
+              <div id="d16">jaya08anjali@gmail.com</div>
+
+        </div>
+
+        <div id="d2">
+            <img src="images/[removal.ai]_tmp-620a8e9547025.png"  id="d21">
+            <div id="ds">Connect with me on</div>
+            <a href="https://www.linkedin.com/in/anjali-singh-8284a61a0/" target="_blank"><img src="images/[removal.ai]_tmp-620a7b6e8f94d.png"  id="d22"></a>
+            <img src="images/ikiii.jfif" id="d23">
+            <div id="d24">Purpose of life</div>
+
+        </div>
+    </div>
+        
+
+        
+               
+        
+    </div>
+    </body>
+    </html>
